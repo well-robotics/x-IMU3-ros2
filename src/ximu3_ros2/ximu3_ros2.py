@@ -4,6 +4,7 @@ import ximu3
 import time
 from sensor_msgs.msg import Imu
 from sensor_msgs.msg import MagneticField
+from geometry_msgs.msg import Vector3
 from std_msgs.msg import Header 
 from rclpy.qos import QoSProfile
 
@@ -34,16 +35,19 @@ class XIMU3_ROS2(Node):
 
         self.imu_publisher_ = self.create_publisher(Imu, 'ximu3/imu', 5)
         self.mag_publisher_ = self.create_publisher(MagneticField, 'ximu3/magnetic', 5)
+        self.highG_publisher_ = self.create_publisher(Vector3, 'ximu3/high_g', 5)
+
         self.imu_msg = Imu() 
-        # self.mag_msg = Magnetic()
-        
+        self.mag_msg = MagneticField()
+        self.high_g_msg = Vector3()
+        self.gravity = 9.81 
+        self.gyro_unit_convert = 3.141592654/180 # from deg/s to rad/s
         # self.connection = self.run(ximu3.UsbConnectionInfo("/dev/ttyACM0"))
         self.connection = ximu3.Connection(ximu3.UsbConnectionInfo("/dev/ttyACM0"))
         self.run()
 
     def run(self):
         # conn = ximu3.Connection(connection_info)
-        print("here")
         self.connection.add_inertial_callback(self.inertial_callback)
         self.connection.add_magnetometer_callback(self.magnetometer_callback)
         self.connection.add_quaternion_callback(self.quaternion_callback)
@@ -57,12 +61,12 @@ class XIMU3_ROS2(Node):
         self.connection.send_commands(['{"strobe":null}'], 2, 500)  # send command to strobe LED
 
     def inertial_callback(self, message):
-        self.imu_msg.angular_velocity.x = message.gyroscope_x
-        self.imu_msg.angular_velocity.y = message.gyroscope_y
-        self.imu_msg.angular_velocity.z = message.gyroscope_z
-        self.imu_msg.linear_acceleration.x = message.accelerometer_x
-        self.imu_msg.linear_acceleration.y = message.accelerometer_y
-        self.imu_msg.linear_acceleration.z = message.accelerometer_z
+        self.imu_msg.angular_velocity.x = message.gyroscope_x*self.gyro_unit_convert
+        self.imu_msg.angular_velocity.y = message.gyroscope_y*self.gyro_unit_convert
+        self.imu_msg.angular_velocity.z = message.gyroscope_z*self.gyro_unit_convert
+        self.imu_msg.linear_acceleration.x = message.accelerometer_x*self.gravity
+        self.imu_msg.linear_acceleration.y = message.accelerometer_y*self.gravity
+        self.imu_msg.linear_acceleration.z = message.accelerometer_z*self.gravity
         self.imu_msg.header.stamp = self.get_clock().now().to_msg() 
         self.imu_publisher_.publish(self.imu_msg)
         # print(timestamp_format(message.timestamp) + " gyro" +
@@ -74,10 +78,14 @@ class XIMU3_ROS2(Node):
         #   float_format(message.accelerometer_z) + " g")
        
     def magnetometer_callback(self,message):
-        print(timestamp_format(message.timestamp) + "mag "+
-            float_format(message.x) + " a.u." +
-            float_format(message.y) + " a.u." +
-            float_format(message.z) + " a.u.")
+        self.mag_msg.magnetic_field.x = message.x
+        self.mag_msg.magnetic_field.y = message.y
+        self.mag_msg.magnetic_field.z = message.z
+        self.mag_publisher_.publish(self.mag_msg)
+        # print(timestamp_format(message.timestamp) + "mag "+
+        #     float_format(message.x) + " a.u." +
+        #     float_format(message.y) + " a.u." +
+        #     float_format(message.z) + " a.u.")
  
 
     def quaternion_callback(self,message):
@@ -92,10 +100,14 @@ class XIMU3_ROS2(Node):
         #     float_format(message.z))
  
     def high_g_accelerometer_callback(self, message):
-        print(timestamp_format(message.timestamp) + " high g" +
-            float_format(message.x) + " g" +
-            float_format(message.y) + " g" +
-            float_format(message.z) + " g")
+        self.high_g_msg.x = message.x*self.gravity 
+        self.high_g_msg.y = message.y*self.gravity 
+        self.high_g_msg.z = message.z*self.gravity 
+        self.highG_publisher_.publish(self.high_g_msg)
+        # print(timestamp_format(message.timestamp) + " high g" +
+        #     float_format(message.x) + " g" +
+        #     float_format(message.y) + " g" +
+        #     float_format(message.z) + " g")
  
 
  
