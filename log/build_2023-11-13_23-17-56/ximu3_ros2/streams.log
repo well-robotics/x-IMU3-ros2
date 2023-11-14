@@ -1,0 +1,23 @@
+[0.452s] Invoking command in '/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/src': PYTHONPATH=/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2/prefix_override:/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/install/ximu3_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ximu3_ros2 build --build-base /home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2/build install --record /home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2/install.log --single-version-externally-managed
+[0.584s] running egg_info
+[0.584s] writing ../build/ximu3_ros2/ximu3_ros2.egg-info/PKG-INFO
+[0.584s] writing dependency_links to ../build/ximu3_ros2/ximu3_ros2.egg-info/dependency_links.txt
+[0.584s] writing entry points to ../build/ximu3_ros2/ximu3_ros2.egg-info/entry_points.txt
+[0.584s] deleting ../build/ximu3_ros2/ximu3_ros2.egg-info/requires.txt
+[0.584s] writing top-level names to ../build/ximu3_ros2/ximu3_ros2.egg-info/top_level.txt
+[0.585s] reading manifest file '../build/ximu3_ros2/ximu3_ros2.egg-info/SOURCES.txt'
+[0.585s] writing manifest file '../build/ximu3_ros2/ximu3_ros2.egg-info/SOURCES.txt'
+[0.586s] running build
+[0.586s] running build_py
+[0.586s] running install
+[0.586s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.586s]   warnings.warn(
+[0.586s] running install_lib
+[0.586s] running install_data
+[0.587s] running install_egg_info
+[0.587s] removing '/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/install/ximu3_ros2/lib/python3.10/site-packages/ximu3_ros2-0.0.0-py3.10.egg-info' (and everything under it)
+[0.588s] Copying ../build/ximu3_ros2/ximu3_ros2.egg-info to /home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/install/ximu3_ros2/lib/python3.10/site-packages/ximu3_ros2-0.0.0-py3.10.egg-info
+[0.588s] running install_scripts
+[0.599s] Installing imu3 script to /home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/install/ximu3_ros2/lib/ximu3_ros2
+[0.599s] writing list of installed files to '/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2/install.log'
+[0.612s] Invoked command in '/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/src' returned '0': PYTHONPATH=/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2/prefix_override:/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/install/ximu3_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/ximu3_ros2 build --build-base /home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2/build install --record /home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2/install.log --single-version-externally-managed

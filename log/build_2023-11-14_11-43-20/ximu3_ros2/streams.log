@@ -1,0 +1,18 @@
+[0.463s] Invoking command in '/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2': PYTHONPATH=/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2/prefix_override:/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/install/ximu3_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2/build --no-deps install_data
+[0.609s] running develop
+[0.711s] running egg_info
+[0.711s] writing ximu3_ros2.egg-info/PKG-INFO
+[0.711s] writing dependency_links to ximu3_ros2.egg-info/dependency_links.txt
+[0.711s] writing entry points to ximu3_ros2.egg-info/entry_points.txt
+[0.711s] writing requirements to ximu3_ros2.egg-info/requires.txt
+[0.711s] writing top-level names to ximu3_ros2.egg-info/top_level.txt
+[0.712s] reading manifest file 'ximu3_ros2.egg-info/SOURCES.txt'
+[0.720s] writing manifest file 'ximu3_ros2.egg-info/SOURCES.txt'
+[0.721s] running build_ext
+[0.721s] Creating /home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/install/ximu3_ros2/lib/python3.10/site-packages/ximu3-ros2.egg-link (link to .)
+[0.721s] Installing imu3 script to /home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/install/ximu3_ros2/lib/ximu3_ros2
+[0.722s] 
+[0.722s] Installed /home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2
+[0.722s] running install_data
+[0.722s] copying package.xml -> /home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/install/ximu3_ros2/share/ximu3_ros2
+[0.737s] Invoked command in '/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2' returned '0': PYTHONPATH=/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2/prefix_override:/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/install/ximu3_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/build/ximu3_ros2/build --no-deps install_data

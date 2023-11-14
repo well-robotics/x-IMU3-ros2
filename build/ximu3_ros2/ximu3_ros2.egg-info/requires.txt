@@ -1,0 +1,3 @@
+setuptools
+sensor_msg
+std_msg

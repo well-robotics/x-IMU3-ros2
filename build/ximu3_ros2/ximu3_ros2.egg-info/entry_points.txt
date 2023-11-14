@@ -1,0 +1,3 @@
+[console_scripts]
+imu3 = ximu3_ros2.ximu3_ros2:main
+

@@ -1,0 +1,22 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/install/ximu3_ros2/lib/python3.10/site-packages",
+        "/opt/openrobots/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "",
+        "/home/bucky/.local/lib/python3.10/site-packages/",
+        "/home/bucky/Documents/mini-cheetah-tmotor-python-can/src/",
+        "/home/bucky/Desktop/bucky_can_control/src/"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/bucky/Documents/repos/HardwareIndividual/x-IMU3-ros2/install/ximu3_ros2/lib/python3.10/site-packages",
+        "/opt/openrobots/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "",
+        "/home/bucky/.local/lib/python3.10/site-packages/",
+        "/home/bucky/Documents/mini-cheetah-tmotor-python-can/src/",
+        "/home/bucky/Desktop/bucky_can_control/src/"
+    ]
+}
