@@ -2,9 +2,9 @@
 
 Based on this repo: https://github.com/xioTechnologies/x-IMU3-Software/tree/main
 Created a ros2 packge to publish associated imu messages. 
-How to use this package
+How to use this package:
 
-A. Use x-imu to configure the message output frequency and commiunication 
+A. Use x-imu software to configure the message output frequency and commiunication 
 
 B. Read the python example on various communications. 
 
